@@ -1,0 +1,116 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ===== Light Mode ===== */
+body {
+  background: #f9fafb;
+  color: #212529;
+}
+
+/* ===== Dark Mode ===== */
+body.dark-mode {
+  background: #121212;
+  color: #e4e6eb;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  transition: background 0.3s, color 0.3s;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.navbar-brand {
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===== Earthquake List ===== */
+.earthquake-list {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-right: 6px;
+  border-radius: 8px;
+}
+
+.earthquake-item {
+  font-size: 14px;
+  line-height: 1.4;
+  transition: transform 0.2s ease, background 0.3s, color 0.3s;
+}
+
+.earthquake-item:hover {
+  transform: translateY(-2px);
+  background: #f1f5f9;
+}
+
+body.dark-mode .earthquake-item {
+  background: #1e1e1e;
+  color: #e4e6eb;
+}
+
+body.dark-mode .earthquake-item:hover {
+  background: #2c2c2c;
+}
+
+/* Scrollbar */
+.earthquake-list::-webkit-scrollbar {
+  width: 8px;
+}
+.earthquake-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+.earthquake-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.earthquake-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+body.dark-mode .earthquake-list::-webkit-scrollbar-thumb {
+  background: #aaa;
+}
+body.dark-mode .earthquake-list::-webkit-scrollbar-thumb:hover {
+  background: #ddd;
+}
+
+/* ===== Map ===== */
+.leaflet-container {
+  height: 80vh !important;
+  width: 100% !important;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+  transition: filter 0.3s;
+}
+body.dark-mode .leaflet-container {
+  filter: brightness(0.85) contrast(1.05);
+}
+
+/* ===== Spinner & Alerts ===== */
+.spinner-border {
+  margin: 20px auto;
+  display: block;
+}
+.alert {
+  border-radius: 8px;
+  font-weight: 500;
+}
+body.dark-mode .alert-danger {
+  background: #3a1f1f;
+  color: #f28b82;
+  border: none;
+}
