@@ -114,3 +114,32 @@ body.dark-mode .alert-danger {
   color: #f28b82;
   border: none;
 }
+/* ===== Earthquake List Headers ===== */
+.earthquake-header {
+  cursor: pointer;
+  font-weight: 500;
+  margin-right: 1rem;
+  transition: color 0.3s, transform 0.2s;
+  color: #212529; /* default for light mode */
+}
+
+.earthquake-header:hover {
+  transform: translateY(-1px);
+  color: #0d6efd; /* subtle hover highlight */
+}
+
+.earthquake-header.active {
+  color: #0d6efd; /* active sort color */
+}
+
+body.dark-mode .earthquake-header {
+  color: #e4e6eb; /* white text in dark mode */
+}
+
+body.dark-mode .earthquake-header:hover {
+  color: #66b2ff; /* subtle hover highlight in dark mode */
+}
+
+body.dark-mode .earthquake-header.active {
+  color: #66b2ff; /* active sort color in dark mode */
+}

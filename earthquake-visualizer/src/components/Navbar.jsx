@@ -2,7 +2,11 @@ import { Navbar as BsNavbar, Container, Form } from "react-bootstrap";
 
 function Navbar({ darkMode, toggleDarkMode }) {
   return (
-    <BsNavbar bg="dark" variant="dark">
+    <BsNavbar
+      bg={darkMode ? "dark" : "light"}   // dynamic background
+      variant={darkMode ? "dark" : "light"} // dynamic text color
+      className="mb-3"
+    >
       <Container>
         <BsNavbar.Brand>🌍 Earthquake Visualizer</BsNavbar.Brand>
         <Form.Check
